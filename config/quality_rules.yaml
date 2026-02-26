@@ -1,0 +1,54 @@
+# Automated Data Quality Monitor - Quality Rules Configuration
+# Author: Brian Stratton
+
+monitoring:
+  name: data-quality-monitor
+  version: "1.0"
+
+# Quality dimension weights (must sum to 100)
+weights:
+  completeness: 30
+  accuracy: 30
+  consistency: 25
+  timeliness: 15
+
+# Completeness rules
+completeness:
+  max_null_pct_warning: 5
+  max_null_pct_critical: 20
+  required_columns: []
+
+# Accuracy rules
+accuracy:
+  outlier_detection:
+    method: zscore
+    threshold: 3.0
+    iqr_multiplier: 1.5
+  type_validation: true
+  range_checks: {}
+
+# Consistency rules
+consistency:
+  check_duplicates: true
+  duplicate_key_columns: []
+  fuzzy_duplicate_threshold: 90
+
+# Timeliness rules
+timeliness:
+  max_data_age_hours: 24
+  date_columns: []
+  check_future_dates: true
+
+# Alerting configuration
+alerts:
+  warning_threshold: 80
+  critical_threshold: 60
+  channels:
+    - console
+
+# Profiling settings
+profiling:
+  sample_size: null
+  histogram_bins: 30
+  top_n_values: 10
+  correlation_threshold: 0.8

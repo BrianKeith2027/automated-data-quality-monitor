@@ -6,6 +6,14 @@ An automated data quality monitoring framework that profiles datasets, detects a
 
 ---
 
+> ### 📍 Project Status — In Active Development
+>
+> **Committed so far:** `config/quality_rules.yaml`, `tests/test_quality_monitor.py`
+>
+> **Still to be implemented:** `Data-Quality-Monitor.ipynb`
+>
+> The architecture, setup, and usage sections below describe the target design for this project. Components listed as still to be implemented are tracked in the Roadmap at the end of this README — some setup or usage commands will not run until those land.
+
 ## 📋 Overview
 
 Poor data quality is one of the leading causes of ML model failures and incorrect business decisions. This project provides a comprehensive, automated framework to continuously monitor and validate data quality across your pipelines.
@@ -124,6 +132,17 @@ Overall Quality Score: 87.3 / 100
 **Brian Stratton** — Senior Data Engineer | AI/ML Engineer | Doctoral Researcher
 - [GitHub](https://github.com/BrianKeith2027)
 - [LinkedIn](https://www.linkedin.com/in/briankstratton/)
+
+## 🗺️ Roadmap
+
+**Built**
+
+- [x] `config/quality_rules.yaml`
+- [x] `tests/test_quality_monitor.py`
+
+**Planned**
+
+- [ ] `Data-Quality-Monitor.ipynb`
 
 ## 📄 License
 
